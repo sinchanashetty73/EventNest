@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventNest - Premium Event Management & Hall Booking</title>
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+  <!-- 1. STICKY NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link">
+        <!-- Premium SVG Logo Design -->
+        <svg viewBox="0 0 100 100" class="logo-icon" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7C3AED" />
+              <stop offset="100%" stop-color="#EC4899" />
+            </linearGradient>
+          </defs>
+          <path d="M20 70 L20 40 L40 25 L60 25 L80 40 L80 70 Z" fill="url(#logo-grad)" opacity="0.15" />
+          <path d="M25 75 L25 45 L50 30 L75 45 L75 75 Z" stroke="url(#logo-grad)" stroke-width="3.5" fill="none" stroke-linejoin="round" />
+          <rect x="38" y="46" width="24" height="18" rx="2" stroke="url(#logo-grad)" stroke-width="2.5" fill="none" />
+          <line x1="44" y1="43" x2="44" y2="47" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="56" y1="43" x2="56" y2="47" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="44" cy="52" r="1.5" fill="url(#logo-grad)" />
+          <circle cx="50" cy="52" r="1.5" fill="url(#logo-grad)" />
+          <circle cx="56" cy="52" r="1.5" fill="url(#logo-grad)" />
+          <circle cx="44" cy="58" r="1.5" fill="url(#logo-grad)" />
+          <circle cx="50" cy="58" r="1.5" fill="url(#logo-grad)" />
+          <circle cx="56" cy="58" r="1.5" fill="url(#logo-grad)" />
+          <path d="M16 60 Q9 55 11 44 Q14 47 19 51" stroke="url(#logo-grad)" stroke-width="2" fill="none" stroke-linecap="round" />
+          <path d="M84 60 Q91 55 89 44 Q86 47 81 51" stroke="url(#logo-grad)" stroke-width="2" fill="none" stroke-linecap="round" />
+          <path d="M50 14 L52 20 L58 22 L52 24 L50 30 L48 24 L42 22 L48 20 Z" fill="url(#logo-grad)" />
+          <path d="M29 22 L30 25 L33 26 L30 27 L29 30 L28 27 L25 26 L28 25 Z" fill="url(#logo-grad)" opacity="0.8" />
+          <path d="M71 22 L72 25 L75 26 L72 27 L71 30 L70 27 L67 26 L70 25 Z" fill="url(#logo-grad)" opacity="0.8" />
+        </svg>
+        <span>EventNest</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#event-types" class="nav-link">Event Types</a></li>
+        <li><a href="#venues" class="nav-link">Venues</a></li>
+        <li><a href="#decorations" class="nav-link">Decorations</a></li>
+        <li><a href="#food-menu" class="nav-link">Food Menu</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Theme Switcher & Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="#venues" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-slider" id="hero-slider">
+      <!-- Unsplash background covers -->
+      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80')"></div>
+    </div>
+    
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-tagline">Plan. Book. Celebrate.</span>
+        <h1 class="hero-title">Plan Your <span>Dream Event</span> Effortlessly</h1>
+        <p class="hero-sub">Book halls, customize decorations, select catering, and manage every event detail from one unified platform.</p>
+        <div class="hero-btns">
+          <a href="#venues" class="btn btn-primary">Book Venue <i class="fa-solid fa-calendar-days"></i></a>
+          <a href="#event-types" class="btn btn-secondary">Explore Events</a>
+        </div>
+      </div>
+      
+      <!-- Animated floating cards -->
+      <div class="hero-visual">
+        <div class="glass-card floating-card floating-card-1">
+          <div class="floating-icon"><i class="fa-solid fa-ring"></i></div>
+          <div class="floating-details">
+            <h4>Luxury Weddings</h4>
+            <p>Curated & Royal Themes</p>
+          </div>
+        </div>
+        <div class="glass-card floating-card floating-card-2">
+          <div class="floating-icon"><i class="fa-solid fa-cake-candles"></i></div>
+          <div class="floating-details">
+            <h4>Birthdays</h4>
+            <p>Vibrant Decor & Music</p>
+          </div>
+        </div>
+        <div class="glass-card floating-card floating-card-3">
+          <div class="floating-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div class="floating-details">
+            <h4>500+ Venues</h4>
+            <p>Across major cities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HALL SEARCH & AVAILABILITY CHECKER -->
+  <section class="container search-bar">
+    <div class="glass-card">
+      <form class="search-form" id="search-form">
+        <div class="input-group">
+          <label><i class="fa-solid fa-location-dot"></i> Location</label>
+          <select id="search-location" required>
+            <option value="">Select Location</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Uptown">Uptown</option>
+            <option value="Westside">Westside</option>
+            <option value="Eastside">Eastside</option>
+            <option value="Garden District">Garden District</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-star"></i> Event Type</label>
+          <select id="search-event-type" required>
+            <option value="">Select Event Type</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Corporate">Corporate Event</option>
+            <option value="Baby Shower">Baby Shower</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-calendar"></i> Date</label>
+          <input type="date" id="search-date" required>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-clock"></i> Time Slot</label>
+          <select id="search-time-slot" required>
+            <option value="">Select Slot</option>
+            <option value="Morning (9 AM - 3 PM)">Morning (9 AM - 3 PM)</option>
+            <option value="Evening (5 PM - 11 PM)">Evening (5 PM - 11 PM)</option>
+            <option value="Full Day">Full Day</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-users"></i> Guests</label>
+          <input type="number" id="search-guests" placeholder="e.g. 250" min="10" max="2000" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Availability</button>
+      </form>
+      <!-- Results Display Container -->
+      <div id="search-result-display" class="search-result">
+        <span id="search-result-text"></span>
+        <button class="btn btn-primary btn-outline" id="search-book-btn" style="padding: 6px 16px; font-size: 0.85rem; display: none;">Book Instantly</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. EVENT CATEGORIES SECTION -->
+  <section class="section-padding container reveal" id="event-types">
+    <div class="section-header text-center">
+      <h2 class="section-title">Explore Event Categories</h2>
+      <p class="section-subtitle">We support a wide array of celebratory gatherings. Pick a category to plan specific layouts.</p>
+    </div>
+    
+    <div class="categories-grid">
+      <div class="glass-card category-card" data-event="Wedding">
+        <div class="category-icon">💍</div>
+        <h3>Wedding</h3>
+        <p>Grand banquet seating, luxury walk-ups, customizable stages, and customized setups.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Birthday">
+        <div class="category-icon">🎂</div>
+        <h3>Birthday Party</h3>
+        <p>Fun decoration templates, balloon themes, vibrant sound, and catering matching kid-favorites.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Anniversary">
+        <div class="category-icon">🎉</div>
+        <h3>Anniversary</h3>
+        <p>Romantic lighting layouts, live musicians, premium food menus, and close family setups.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Baby Shower">
+        <div class="category-icon">👶</div>
+        <h3>Baby Shower</h3>
+        <p>Soft pastel thematic decorations, comfortable seating arrangements, and photo backdrop booths.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Engagement">
+        <div class="category-icon">💑</div>
+        <h3>Engagement</h3>
+        <p>Traditional stage ornaments, rings presentation settings, and customized signage entries.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Graduation">
+        <div class="category-icon">🎓</div>
+        <h3>Graduation Ceremony</h3>
+        <p>Formal speech stages, customized catering options, photobooths, and student group seating.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Corporate">
+        <div class="category-icon">🏢</div>
+        <h3>Corporate Event</h3>
+        <p>High-end AV setups, presentation displays, fast internet access, and business buffets.</p>
+      </div>
+      <div class="glass-card category-card" data-event="Housewarming">
+        <div class="category-icon">🏠</div>
+        <h3>Housewarming</h3>
+        <p>Cozy space arrangements, traditional pooja decoration arrays, and local delicacies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED VENUES SECTION -->
+  <section class="section-padding container reveal" id="venues">
+    <div class="section-header text-center">
+      <h2 class="section-title">Featured Venues</h2>
+      <p class="section-subtitle">Handpicked premium halls and convention centers with verified amenities and reviews.</p>
+    </div>
+    
+    <!-- Filter tabs -->
+    <div class="venue-filters">
+      <button class="filter-btn active" data-filter="all">All Venues</button>
+      <button class="filter-btn" data-filter="Downtown">Downtown</button>
+      <button class="filter-btn" data-filter="Uptown">Uptown</button>
+      <button class="filter-btn" data-filter="Westside">Westside</button>
+      <button class="filter-btn" data-filter="Garden District">Garden District</button>
+    </div>
+    
+    <div class="venues-grid" id="venues-grid">
+      <!-- Javascript will populate these cards -->
+    </div>
+  </section>
+
+  <!-- 6. VENUE DETAILS MODAL (EXPANSION) -->
+  <div class="modal" id="venue-details-modal">
+    <div class="glass-card modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close Details Modal"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-hero">
+        <img src="" alt="Venue Image" class="modal-hero-img" id="modal-img">
+        <div class="modal-hero-overlay">
+          <div class="modal-title-wrapper">
+            <h2 id="modal-title" style="font-size: 2.2rem; font-family: var(--font-heading);">Venue Name</h2>
+            <p id="modal-location-text"><i class="fa-solid fa-location-dot"></i> Location details</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <div class="modal-grid">
+          <!-- Left side details -->
+          <div class="modal-info-section">
+            <h3>Key Details</h3>
+            <p id="modal-desc" style="margin-bottom: 20px; color: var(--text-muted);">This is a beautiful and spacious hall ideal for all occasions, offering robust amenities.</p>
+            
+            <div class="modal-gallery-strip">
+              <img src="" alt="Gallery 1" class="modal-gallery-img" id="modal-gal-1">
+              <img src="Grand Boquet.jpg" alt="Gallery 2" class="modal-gallery-img" id="modal-gal-2">
+              <img src="" alt="Gallery 3" class="modal-gallery-img" id="modal-gal-3">
+            </div>
+            
+            <h3>Hall Specifications</h3>
+            <div class="modal-specs-grid">
+              <div class="modal-spec-card">
+                <span>Capacity</span>
+                <span id="modal-capacity">500 Guests</span>
+              </div>
+              <div class="modal-spec-card">
+                <span>Base Pricing</span>
+                <span id="modal-price">₹1,50,000</span>
+              </div>
+              <div class="modal-spec-card">
+                <span>AC Availability</span>
+                <span id="modal-ac">Fully Air Conditioned</span>
+              </div>
+              <div class="modal-spec-card">
+                <span>Parking Capacity</span>
+                <span id="modal-parking">150 Cars</span>
+              </div>
+              <div class="modal-spec-card">
+                <span>Stage Dimensions</span>
+                <span id="modal-stage">40ft x 20ft</span>
+              </div>
+              <div class="modal-spec-card">
+                <span>Seating Layouts</span>
+                <span id="modal-seating">Theater, Banquet, Cluster</span>
+              </div>
+            </div>
+            
+            <h3>Contact Information</h3>
+            <p style="font-weight: 500;"><i class="fa-solid fa-phone" style="color: var(--primary); margin-right: 8px;"></i> +91 98765 43210</p>
+            <p style="font-weight: 500;"><i class="fa-solid fa-envelope" style="color: var(--primary); margin-right: 8px;"></i> bookings@eventnest.com</p>
+          </div>
+          
+          <!-- Right side Booking configuration summary -->
+          <div>
+            <div class="booking-summary-box">
+              <h3 style="margin-bottom: 15px; font-size: 1.25rem;">Booking Confirmation</h3>
+              <form id="modal-booking-form">
+                <div class="input-group" style="margin-bottom: 12px;">
+                  <label>Booking Date</label>
+                  <input type="date" id="booking-confirm-date" required>
+                </div>
+                <div class="input-group" style="margin-bottom: 12px;">
+                  <label>Guests Count</label>
+                  <input type="number" id="booking-confirm-guests" min="10" required>
+                </div>
+                
+                <div style="margin: 20px 0;">
+                  <div class="summary-row">
+                    <span>Base Venue Rental</span>
+                    <span id="summary-base-rent">₹0</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Tax & Services (18%)</span>
+                    <span id="summary-taxes">₹0</span>
+                  </div>
+                  <div class="summary-row total">
+                    <span>Estimated Total</span>
+                    <span id="summary-grand-total">₹0</span>
+                  </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Book Venue Now</button>
+                <button type="button" class="btn btn-secondary" id="download-receipt-btn" style="width: 100%; display: none;"><i class="fa-solid fa-download"></i> Receipt</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. DECORATION CUSTOMIZATION SECTION -->
+  <section class="section-padding container reveal" id="decorations">
+    <div class="section-header text-center">
+      <h2 class="section-title">Customize Your Decoration</h2>
+      <p class="section-subtitle">Select decoration modules and themes to visually see options and calculate expenses instantly.</p>
+    </div>
+    
+    <div class="glass-card deco-creator">
+      <div class="configurator-panel">
+        <!-- Theme Selection -->
+        <div class="configurator-group">
+          <label>Theme Template</label>
+          <div class="option-cards" id="theme-selector">
+            <div class="option-card active" data-val="Traditional" data-price="45000">Traditional</div>
+            <div class="option-card" data-val="Royal" data-price="85000">Royal</div>
+            <div class="option-card" data-val="Floral" data-price="60000">Floral</div>
+            <div class="option-card" data-val="Luxury" data-price="120000">Luxury</div>
+            <div class="option-card" data-val="Modern" data-price="50000">Modern</div>
+            <div class="option-card" data-val="Custom" data-price="75000">Custom</div>
+          </div>
+        </div>
+        
+        <!-- Color Combinations -->
+        <div class="configurator-group">
+          <label>Color Palette</label>
+          <div class="color-dot-wrapper" id="color-selector">
+            <div class="color-dot-opt active" data-val="Red + Gold">
+              <span class="color-indicator" style="background: linear-gradient(135deg, red, gold)"></span> Red/Gold
+            </div>
+            <div class="color-dot-opt" data-val="White + Gold">
+              <span class="color-indicator" style="background: linear-gradient(135deg, white, gold)"></span> White/Gold
+            </div>
+            <div class="color-dot-opt" data-val="Purple + Silver">
+              <span class="color-indicator" style="background: linear-gradient(135deg, purple, silver)"></span> Purple/Silver
+            </div>
+            <div class="color-dot-opt" data-val="Pink + White">
+              <span class="color-indicator" style="background: linear-gradient(135deg, pink, white)"></span> Pink/White
+            </div>
+            <div class="color-dot-opt" data-val="Blue + White">
+              <span class="color-indicator" style="background: linear-gradient(135deg, blue, white)"></span> Blue/White
+            </div>
+          </div>
+        </div>
+        
+        <!-- Flower Selection -->
+        <div class="configurator-group">
+          <label>Flowers Array</label>
+          <div class="option-cards" id="flower-selector">
+            <div class="option-card active" data-val="Roses" data-price="15000">Roses (+₹15K)</div>
+            <div class="option-card" data-val="Jasmine" data-price="12000">Jasmine (+₹12K)</div>
+            <div class="option-card" data-val="Marigold" data-price="8000">Marigold (+₹8K)</div>
+            <div class="option-card" data-val="Orchids" data-price="25000">Orchids (+₹25K)</div>
+            <div class="option-card" data-val="Mixed Flowers" data-price="18000">Mixed (+₹18K)</div>
+          </div>
+        </div>
+        
+        <!-- Stage Decoration Quality -->
+        <div class="configurator-group">
+          <label>Stage Backdrop Complexity</label>
+          <div class="option-cards" id="stage-selector">
+            <div class="option-card active" data-val="Basic" data-price="10000">Basic (+₹10K)</div>
+            <div class="option-card" data-val="Premium" data-price="25000">Premium (+₹25K)</div>
+            <div class="option-card" data-val="Luxury" data-price="50000">Luxury (+₹50K)</div>
+            <div class="option-card" data-val="Custom" data-price="35000">Custom (+₹35K)</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visual preview block -->
+      <div class="deco-visualizer" id="deco-visual-panel" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80')">
+        <div class="deco-overlay" id="deco-overlay"></div>
+        <div class="glass-card deco-summary">
+          <h4 style="font-size: 1.25rem; font-family: var(--font-heading); margin-bottom: 6px;">Visualizing Decoration:</h4>
+          <p id="deco-summary-text" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">Traditional Theme in Red + Gold with Roses & Basic Stage.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; color: var(--primary); font-size: 1.35rem;" id="deco-total-price">₹70,000</span>
+            <button class="btn btn-primary btn-outline" style="padding: 6px 16px; font-size: 0.85rem;" id="apply-deco-btn">Apply to Booking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOD CATERING SECTION -->
+  <section class="section-padding container reveal" id="food-menu">
+    <div class="section-header text-center">
+      <h2 class="section-title">Food Catering Configurator</h2>
+      <p class="section-subtitle">Handpick menu items, adjust the guest slider, and calculate catering costs in real-time.</p>
+    </div>
+    
+    <div class="glass-card catering-section">
+      <!-- Menu Item Grid -->
+      <div class="catering-panel">
+        <h3 class="menu-category-title"><i class="fa-solid fa-leaf" style="color: #10B981;"></i> Vegetarian Delicacies</h3>
+        <div class="menu-list" id="veg-menu-list">
+          <div class="menu-item" data-price="180">
+            <input type="checkbox" id="veg-item-1" value="Paneer Butter Masala">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Paneer Butter Masala</span>
+              <span class="menu-item-price">₹180 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="200">
+            <input type="checkbox" id="veg-item-2" value="Veg Biryani">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Veg Biryani</span>
+              <span class="menu-item-price">₹200 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="150">
+            <input type="checkbox" id="veg-item-3" value="Fried Rice">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Fried Rice</span>
+              <span class="menu-item-price">₹150 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="80">
+            <input type="checkbox" id="veg-item-4" value="Ice Cream">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Ice Cream (Choc/Vanilla)</span>
+              <span class="menu-item-price">₹80 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="70">
+            <input type="checkbox" id="veg-item-5" value="Gulab Jamun">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Gulab Jamun (2 Pcs)</span>
+              <span class="menu-item-price">₹70 / plate</span>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="menu-category-title"><i class="fa-solid fa-drumstick-bite" style="color: #EF4444;"></i> Non-Vegetarian Delicacies</h3>
+        <div class="menu-list" id="nonveg-menu-list">
+          <div class="menu-item" data-price="250">
+            <input type="checkbox" id="nv-item-1" value="Chicken Biryani">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Chicken Biryani</span>
+              <span class="menu-item-price">₹250 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="220">
+            <input type="checkbox" id="nv-item-2" value="Butter Chicken">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Butter Chicken</span>
+              <span class="menu-item-price">₹220 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="240">
+            <input type="checkbox" id="nv-item-3" value="Fish Fry">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Fish Fry (Crispy Kingfish)</span>
+              <span class="menu-item-price">₹240 / plate</span>
+            </div>
+          </div>
+          <div class="menu-item" data-price="300">
+            <input type="checkbox" id="nv-item-4" value="Mutton Curry">
+            <div class="menu-item-info">
+              <span class="menu-item-name">Mutton Curry</span>
+              <span class="menu-item-price">₹300 / plate</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slider of guests count -->
+        <div class="guest-slider-box">
+          <label for="catering-guests">Guests Count: <span id="catering-guests-val" style="color: var(--primary); font-size: 1.25rem;">150</span></label>
+          <input type="range" id="catering-guests" class="slider-input" min="20" max="1000" step="10" value="150">
+        </div>
+      </div>
+      
+      <!-- Summarizer -->
+      <div class="catering-summary">
+        <div class="summary-circle">
+          <span style="font-size: 0.9rem; color: var(--text-muted);">Catering Total</span>
+          <span style="font-size: 1.8rem; font-weight: 800;" id="catering-total-price">₹0</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;" id="cater-info-label">Select at least one item from Veg/Non-Veg lists.</p>
+        <button class="btn btn-primary" id="apply-catering-btn">Apply to Booking</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. EVENT BUDGET CALCULATOR -->
+  <section class="section-padding container reveal" id="budget-calculator">
+    <div class="section-header text-center">
+      <h2 class="section-title">Event Budget Planner</h2>
+      <p class="section-subtitle">Outline your ideal capital limit to get realistic hall cost projections across other key assets.</p>
+    </div>
+    
+    <div class="glass-card budget-calculator-grid">
+      <!-- Input Panel -->
+      <div class="budget-form">
+        <form id="budget-plan-form">
+          <div class="input-group" style="margin-bottom: 16px;">
+            <label><i class="fa-solid fa-indian-rupee-sign"></i> Target Capital Budget (₹)</label>
+            <input type="number" id="budget-amount" value="500000" min="50000" required>
+          </div>
+          <div class="input-group" style="margin-bottom: 16px;">
+            <label><i class="fa-solid fa-users"></i> Estimated Guests</label>
+            <input type="number" id="budget-guests" value="200" min="10" required>
+          </div>
+          <div class="input-group" style="margin-bottom: 24px;">
+            <label><i class="fa-solid fa-heart"></i> Celebration Category</label>
+            <select id="budget-event-type" required>
+              <option value="Wedding">Wedding</option>
+              <option value="Birthday">Birthday Party</option>
+              <option value="Anniversary">Anniversary</option>
+              <option value="Corporate">Corporate Meeting</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate Allocations</button>
+        </form>
+      </div>
+      
+      <!-- Output bars -->
+      <div class="budget-results">
+        <div>
+          <h3 style="margin-bottom: 15px; font-size: 1.25rem;">Estimated Allocations</h3>
+          <div class="cost-breakdown-list">
+            <div class="cost-bar-item">
+              <div class="cost-bar-label">
+                <span>Hall Rental</span>
+                <span id="budget-hall-cost">₹0</span>
+              </div>
+              <div class="cost-bar-outer"><div class="cost-bar-inner" id="bar-hall"></div></div>
+            </div>
+            <div class="cost-bar-item">
+              <div class="cost-bar-label">
+                <span>Decorations</span>
+                <span id="budget-decor-cost">₹0</span>
+              </div>
+              <div class="cost-bar-outer"><div class="cost-bar-inner" id="bar-decor"></div></div>
+            </div>
+            <div class="cost-bar-item">
+              <div class="cost-bar-label">
+                <span>Food Catering</span>
+                <span id="budget-catering-cost">₹0</span>
+              </div>
+              <div class="cost-bar-outer"><div class="cost-bar-inner" id="bar-catering"></div></div>
+            </div>
+            <div class="cost-bar-item">
+              <div class="cost-bar-label">
+                <span>Photography & Video</span>
+                <span id="budget-photo-cost">₹0</span>
+              </div>
+              <div class="cost-bar-outer"><div class="cost-bar-inner" id="bar-photo"></div></div>
+            </div>
+            <div class="cost-bar-item">
+              <div class="cost-bar-label">
+                <span>DJ & Sound Entertainment</span>
+                <span id="budget-dj-cost">₹0</span>
+              </div>
+              <div class="cost-bar-outer"><div class="cost-bar-inner" id="bar-dj"></div></div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="border-top: 1px solid var(--border-color); padding-top: 20px;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px;">
+            <span>Total Simulated Cost:</span>
+            <span id="budget-total-alloc">₹0</span>
+          </div>
+          <div id="budget-alert-box" class="budget-alert">
+            Enter capital bounds to calculate.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. SERVICE PROVIDERS SECTION -->
+  <section class="section-padding container reveal" id="service-providers">
+    <div class="section-header text-center">
+      <h2 class="section-title">Allied Service Providers</h2>
+      <p class="section-subtitle">Enhance your event experience by choosing verified photographers, bands, makeup artists, and coordinators.</p>
+    </div>
+    
+    <div class="services-grid">
+      <!-- 1. Photography -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">📸</div>
+            <div>
+              <h3 class="service-name">LensCraft Studios</h3>
+              <span class="service-tag">Professional Photography</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Candid wedding shoots, pre-wedding couple highlights, and outdoor session profiles.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹35,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.9</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="LensCraft Studios (Photography)" data-price="35000">Book Service</button>
+      </div>
+      
+      <!-- 2. Videography -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">🎥</div>
+            <div>
+              <h3 class="service-name">Cinematic Reels</h3>
+              <span class="service-tag">Videography & Cinematic Shoots</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">High-definition drone footage, cinematic reels, highlight wraps, and YouTube streams.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹45,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.8</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="Cinematic Reels (Videography)" data-price="45000">Book Service</button>
+      </div>
+      
+      <!-- 3. DJ & Music -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">🎵</div>
+            <div>
+              <h3 class="service-name">DJ Soundwaves</h3>
+              <span class="service-tag">Sound, DJ & Disco Lights</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Top chart Bollywood, house, EDM playlists, visual setup, and custom smoke layouts.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹25,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.7</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="DJ Soundwaves" data-price="25000">Book Service</button>
+      </div>
+      
+      <!-- 4. Live Band -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">🎤</div>
+            <div>
+              <h3 class="service-name">The Retro Beats</h3>
+              <span class="service-tag">Live Instrumental & Vocal Band</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Classic instrumental strings, acoustic vocals, customized songs lists, and reception background.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹55,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.9</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="The Retro Beats (Live Band)" data-price="55000">Book Service</button>
+      </div>
+      
+      <!-- 5. Makeup Artist -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">💄</div>
+            <div>
+              <h3 class="service-name">Glam & Grace</h3>
+              <span class="service-tag">Professional Bridal/Party Makeup</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Bridal styling, wedding party packages, HD hair designs, and premium makeup layers.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹20,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.8</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="Glam & Grace Makeup" data-price="20000">Book Service</button>
+      </div>
+      
+      <!-- 6. Decoration Team -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">🎨</div>
+            <div>
+              <h3 class="service-name">BloomDecor Experts</h3>
+              <span class="service-tag">Visual Designers & Planners</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Custom theme architectures, hand-crafted photo zones, and wedding pathway setups.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹30,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.7</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="BloomDecor Experts" data-price="30000">Book Service</button>
+      </div>
+      
+      <!-- 7. Transportation -->
+      <div class="glass-card service-card">
+        <div>
+          <div class="service-header">
+            <div class="service-avatar">🚗</div>
+            <div>
+              <h3 class="service-name">Elite Luxury Rides</h3>
+              <span class="service-tag">VIP Escorts & Classic Cars</span>
+            </div>
+          </div>
+          <p class="service-body" style="font-size: 0.9rem; color: var(--text-muted);">Luxury vintage convertibles, groom getaway sports models, and group mini-coaches.</p>
+        </div>
+        <div class="service-price-rating">
+          <span>₹15,000 / event</span>
+          <span style="color: #FBBF24;"><i class="fa-solid fa-star"></i> 4.6</span>
+        </div>
+        <button class="btn btn-primary btn-outline add-service-btn" style="margin-top: 20px;" data-name="Elite Luxury Rides" data-price="15000">Book Service</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. EVENT GALLERY SECTION -->
+  <section class="section-padding container reveal" id="gallery">
+    <div class="section-header text-center">
+      <h2 class="section-title">Inspiration Gallery</h2>
+      <p class="section-subtitle">Real photos captured by our photography teams from actual client events hosted at our venue halls.</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item double-w double-h">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Wedding Setup" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Wedding Banquet Setup</h3>
+          <p>Royal ballroom seating arrays</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=400&q=80" alt="Birthday Celebration" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Vibrant Birthday</h3>
+          <p>Kids birthday balloons decor</p>
+        </div>
+      </div>
+      <div class="gallery-item double-h">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=80" alt="Table Floral Layouts" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Anniversary Table Decor</h3>
+          <p>Detailed white orchids and roses styling</p>
+        </div>
+      </div>
+      <div class="gallery-item double-w">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Conference Hall" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Corporate Gathering</h3>
+          <p>High-end meeting space configuration</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=400&q=80" alt="Catering Buffet Setup" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Food Catering Area</h3>
+          <p>Hygenic buffet tables layout</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519225495810-7517c5a690b6?auto=format&fit=crop&w=400&q=80" alt="Stage Floral Arrangement" class="gallery-img">
+        <div class="gallery-hover-overlay">
+          <h3>Floral Stage Entrance</h3>
+          <p>Modern pastel draping concept</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="lightbox" id="gallery-lightbox">
+    <div class="lightbox-content">
+      <img src="" alt="Zoomed View" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption">Caption text</div>
+    </div>
+    <button class="modal-close" style="top: 30px; right: 30px;" id="lightbox-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- 12. PRICING PLANS -->
+  <section class="section-padding container reveal" id="pricing">
+    <div class="section-header text-center">
+      <h2 class="section-title">Pricing Packages</h2>
+      <p class="section-subtitle">Simplified platform listing and event management subscription plans for venue hosts & celebrants.</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <!-- Plan 1 -->
+      <div class="glass-card pricing-card">
+        <div class="pricing-header">
+          <h3>Basic Plan</h3>
+          <div class="pricing-price">₹999<span>/event</span></div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Standard Venue Listings</li>
+          <li><i class="fa-solid fa-check"></i> Availability Checker Tool</li>
+          <li><i class="fa-solid fa-check"></i> Basic Decoration Selectors</li>
+          <li><i class="fa-solid fa-times"></i> Food Catering Configurator</li>
+          <li><i class="fa-solid fa-times"></i> Dedicated Booking Manager</li>
+          <li><i class="fa-solid fa-times"></i> Offline Receipt Downloads</li>
+        </ul>
+        <button class="btn btn-secondary" style="width: 100%;">Get Started</button>
+      </div>
+      
+      <!-- Plan 2 -->
+      <div class="glass-card pricing-card popular">
+        <span class="popular-badge">POPULAR</span>
+        <div class="pricing-header">
+          <h3>Premium Plan</h3>
+          <div class="pricing-price">₹2,999<span>/event</span></div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> Unlimited Premium Venue Listing</li>
+          <li><i class="fa-solid fa-check"></i> Real-time Availability Checker</li>
+          <li><i class="fa-solid fa-check"></i> Advanced Decoration Customizer</li>
+          <li><i class="fa-solid fa-check"></i> Catering Price Calculator</li>
+          <li><i class="fa-solid fa-check"></i> AI Chatbot Planner Assist</li>
+          <li><i class="fa-solid fa-times"></i> Dedicated Event Assistant</li>
+        </ul>
+        <button class="btn btn-primary" style="width: 100%;">Get Started</button>
+      </div>
+      
+      <!-- Plan 3 -->
+      <div class="glass-card pricing-card">
+        <div class="pricing-header">
+          <h3>Enterprise Plan</h3>
+          <div class="pricing-price">₹5,999<span>/event</span></div>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fa-solid fa-check"></i> 100% Configurable Packages</li>
+          <li><i class="fa-solid fa-check"></i> Custom Budget Auto-allocator</li>
+          <li><i class="fa-solid fa-check"></i> Advanced Decoration Previews</li>
+          <li><i class="fa-solid fa-check"></i> Catering Plate Calculator</li>
+          <li><i class="fa-solid fa-check"></i> AI Chatbot + Human Support</li>
+          <li><i class="fa-solid fa-check"></i> Instant Receipt & Invoice Print</li>
+        </ul>
+        <button class="btn btn-secondary" style="width: 100%;">Get Started</button>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="pricing-table-wrapper">
+      <table class="pricing-comparison-table glass-card" style="padding: 20px;">
+        <thead>
+          <tr>
+            <th>Core Feature List</th>
+            <th>Basic (₹999)</th>
+            <th>Premium (₹2999)</th>
+            <th>Enterprise (₹5999)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hall Listings Map View</td>
+            <td>Standard</td>
+            <td>Priority</td>
+            <td>VIP Featured</td>
+          </tr>
+          <tr>
+            <td>Catering Cost Auto Calculator</td>
+            <td><i class="fa-solid fa-times" style="color: #EF4444;"></i></td>
+            <td><i class="fa-solid fa-check"></i> Yes</td>
+            <td><i class="fa-solid fa-check"></i> Yes</td>
+          </tr>
+          <tr>
+            <td>Decor Visual Previewer</td>
+            <td>Basic color choice</td>
+            <td>Dynamic 2D view</td>
+            <td>Personal designer custom</td>
+          </tr>
+          <tr>
+            <td>Chatbot AI Assistant Queries</td>
+            <td>10 / day</td>
+            <td>Unlimited</td>
+            <td>Unlimited (Priority Response)</td>
+          </tr>
+          <tr>
+            <td>Commission rate on hall bookings</td>
+            <td>5%</td>
+            <td>2.5%</td>
+            <td>0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 13. TESTIMONIALS SECTION -->
+  <section class="section-padding container reveal" id="testimonials">
+    <div class="section-header text-center">
+      <h2 class="section-title">Client Success Stories</h2>
+      <p class="section-subtitle">Read feedback notes submitted by couples, parents, and managers who hosted events using EventNest.</p>
+    </div>
+    
+    <div class="testimonial-section">
+      <div class="testimonial-carousel-container" id="testimonial-carousel">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide active">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Reviewer" class="reviewer-img">
+          <h4 class="reviewer-name">Anjali & Rohit Sharma</h4>
+          <div class="review-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"EventNest made planning our wedding completely stress-free! We booked the Royal Palace, customized our floral arrangements, and had the catering priced dynamically within 15 minutes. Best startup platform!"</p>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Reviewer" class="reviewer-img">
+          <h4 class="reviewer-name">Vikram Aditya</h4>
+          <div class="review-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="review-text">"Our annual corporate milestone celebration went extremely smooth. The AV configuration support, seating layout checks, and live menu adjustments worked perfectly. Highly recommended!"</p>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Reviewer" class="reviewer-img">
+          <h4 class="reviewer-name">Sneha Reddy</h4>
+          <div class="review-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"I planned my daughter's first birthday using the interactive catering calculator. The custom cupcakes and balloon decoration choices looked identical to the screen render. Amazing service!"</p>
+        </div>
+      </div>
+      
+      <div class="carousel-dots" id="carousel-dots">
+        <button class="carousel-dot active" data-index="0"></button>
+        <button class="carousel-dot" data-index="1"></button>
+        <button class="carousel-dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. STATISTICS SECTION -->
+  <section class="section-padding container reveal" id="stats">
+    <div class="stats-grid">
+      <div class="glass-card stat-card">
+        <div class="stat-number" data-target="10000">0</div>
+        <div class="stat-label">Events Managed</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number" data-target="500">0</div>
+        <div class="stat-label">Premium Venues</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number" data-target="50000">0</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="glass-card stat-card">
+        <div class="stat-number" data-target="99">0</div>
+        <div class="stat-label">Satisfaction Rate (%)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. FAQ SECTION -->
+  <section class="section-padding container reveal" id="faq">
+    <div class="section-header text-center">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Got questions about deposits, catering policies, or cancellations? We have answers.</p>
+    </div>
+    
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I book a venue?</span>
+          <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Search using our availability checker, click "View Details" on your preferred venue, fill in your dates/guest numbers, customize your add-ons, and click "Book Venue Now". You'll get an immediate booking confirmation code.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I customize decorations?</span>
+          <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! Our decoration panel lets you choose color palettes, stage types, and flower selections. Custom layouts can also be uploaded for our visual design partners to construct at the hall site.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How is catering charged?</span>
+          <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Catering is calculated per guest plate. Select your menu items (e.g. Biryani, Paneer, Ice Cream), slide the guest count bar, and your total price automatically updates based on plate prices.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I cancel bookings?</span>
+          <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Full refunds are issued for bookings cancelled up to 14 days before the event date. Cancelations between 7 to 13 days are eligible for a 50% refund, while cancellations under 7 days are non-refundable.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are halls verified?</span>
+          <i class="fa-solid fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Every venue listed on EventNest undergoes a 5-step verification process checking local zoning safety licenses, electric limits, parking limits, restroom hygene, and review validity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. CONTACT SECTION -->
+  <section class="section-padding container reveal" id="contact">
+    <div class="section-header text-center">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Planning a complex event or need special custom rates? Drop us a line.</p>
+    </div>
+    
+    <div class="contact-grid">
+      <!-- Left side info & map -->
+      <div class="contact-info-panel">
+        <div class="glass-card contact-card-box">
+          <div class="contact-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="contact-card-details">
+            <h4>Our Headquarters</h4>
+            <p>102, Startup Valley Outer Ring Rd, Koramangala, Bengaluru, KA - 560034</p>
+          </div>
+        </div>
+        <div class="glass-card contact-card-box">
+          <div class="contact-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <div class="contact-card-details">
+            <h4>Contact Support</h4>
+            <p>Support Call line: +91 80 4567 8900<br>Office: info@eventnest.com</p>
+          </div>
+        </div>
+        
+        <!-- Google Map Embed Placeholder -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.067468165682!2d77.6366!3d12.934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae144ed8a2e2f3%3A0x280e22709e13e4b7!2sKoramangala%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1624021234567" 
+            class="map-iframe" 
+            allowfullscreen="" 
+            loading="lazy" 
+            title="Office Location Map">
+          </iframe>
+        </div>
+      </div>
+      
+      <!-- Right side form -->
+      <div class="glass-card contact-form-panel">
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" required>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" required>
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Phone Number</label>
+            <input type="tel" id="c-phone" required>
+          </div>
+          <div class="form-group">
+            <label for="c-event">Event Type</label>
+            <select id="c-event" required>
+              <option value="Wedding">Wedding</option>
+              <option value="Birthday">Birthday</option>
+              <option value="Anniversary">Anniversary</option>
+              <option value="Corporate">Corporate Meeting</option>
+              <option value="Custom">Other Celebrations</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label for="c-msg">Your Message</label>
+            <textarea id="c-msg" rows="5" placeholder="Share event particulars like guest count, dates, preferred decorations..." required></textarea>
+          </div>
+          <div class="form-full">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <svg viewBox="0 0 100 100" class="logo-icon" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+              <path d="M25 75 L25 45 L50 30 L75 45 L75 75 Z" stroke="url(#logo-grad)" stroke-width="5" fill="none" />
+              <circle cx="50" cy="50" r="10" fill="url(#logo-grad)" />
+            </svg>
+            <span>EventNest</span>
+          </a>
+          <p class="footer-text">EventNest is a modern tech platform connecting venue searchers with venue owners and decorative artists. Simplifying booking workflows so you focus only on celebrations.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-nav">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#event-types">Event Types</a></li>
+            <li><a href="#venues">Featured Venues</a></li>
+            <li><a href="#decorations">Decor Gallery</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4>Pricing & Help</h4>
+          <ul class="footer-links">
+            <li><a href="#pricing">Pricing Plans</a></li>
+            <li><a href="#faq">FAQ Accordion</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+            <li><a href="#">Cancellation Policies</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4>Corporate Info</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Founders</a></li>
+            <li><a href="#">Security audits</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Terms & Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 EventNest Inc. All Rights Reserved. Tagline: "Plan. Book. Celebrate."</p>
+        <p>Built with ❤️ for Modern Celebrations</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ADVANCED FEATURE: AI EVENT PLANNING ASSISTANT CHATBOT -->
+  <div class="chatbot-widget" id="chatbot-widget">
+    <div class="glass-card chatbot-box" id="chatbot-box">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <i class="fa-solid fa-robot"></i>
+          <div>
+            <h4 style="font-size: 1rem; font-family: var(--font-heading);">EventNest AI Assistant</h4>
+            <span class="chatbot-status">🟢 Online - Instant Help</span>
+          </div>
+        </div>
+        <button class="modal-close" style="position: static; width: 28px; height: 28px; font-size: 0.9rem;" id="close-chat" aria-label="Close Chat Window"><i class="fa-solid fa-minus"></i></button>
+      </div>
+      
+      <div class="chatbot-messages" id="chat-messages">
+        <div class="chat-bubble bot">
+          Hi! I am NestBot, your AI event planner. Ask me anything about venue rental prices, capacity matching, decoration colors, or catering packages!
+        </div>
+      </div>
+      
+      <!-- Preset suggest pills -->
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button class="chat-suggest-btn" data-query="Which venue is best for a wedding?">Best wedding venue?</button>
+        <button class="chat-suggest-btn" data-query="How does the budget calculator allocate funds?">Budget allocation?</button>
+        <button class="chat-suggest-btn" data-query="Do you have halls with AC and parking?">Halls with AC?</button>
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input type="text" class="chatbot-input" id="chat-input" placeholder="Type event details...">
+        <button class="chatbot-send" id="chat-send" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+    
+    <button class="chatbot-toggle" id="chat-toggle" aria-label="Toggle Chat Bot Window">
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
+  </div>
+
+  <!-- Booking Success Modal with receipt visual layout -->
+  <div class="modal" id="receipt-modal">
+    <div class="glass-card modal-content" style="max-width: 500px; padding: 40px; text-align: center;">
+      <button class="modal-close" id="receipt-modal-close" aria-label="Close Success Modal"><i class="fa-solid fa-xmark"></i></button>
+      <div style="font-size: 4rem; color: #10B981; margin-bottom: 20px;"><i class="fa-regular fa-circle-check"></i></div>
+      <h2 style="font-family: var(--font-heading); margin-bottom: 10px;">Booking Confirmed!</h2>
+      <p style="color: var(--text-muted); margin-bottom: 30px;" id="receipt-success-msg">Your transaction was processed successfully. Here is your official booking ticket.</p>
+      
+      <!-- Styled Invoice Area -->
+      <div id="booking-invoice-card" style="background: white; color: #111827; padding: 25px; border-radius: var(--radius-md); text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px dashed #7C3AED; margin-bottom: 30px; position: relative;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #E5E7EB; padding-bottom: 12px; margin-bottom: 16px;">
+          <div>
+            <h4 style="font-weight: 800; font-size: 1.15rem; color: #7C3AED;">EventNest Invoice</h4>
+            <span style="font-size: 0.75rem; color: #6B7280;" id="invoice-id">INV-1092-2026</span>
+          </div>
+          <span style="background: #D1FAE5; color: #065F46; padding: 4px 8px; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 700; align-self: flex-start;">PAID</span>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; margin-bottom: 16px;">
+          <div><strong>Venue:</strong> <span id="rec-venue">Royal Palace Hall</span></div>
+          <div><strong>Event Date:</strong> <span id="rec-date">June 24, 2026</span></div>
+          <div><strong>Guest Count:</strong> <span id="rec-guests">150 Guests</span></div>
+          <div><strong>Custom Decor:</strong> <span id="rec-decor">Traditional Theme</span></div>
+          <div><strong>Catering Package:</strong> <span id="rec-catering">3 Veg, 2 Non-Veg Items</span></div>
+        </div>
+        
+        <div style="border-top: 1px solid #E5E7EB; padding-top: 12px; display: flex; justify-content: space-between; align-weight: 800; font-size: 1.1rem; color: #111827;">
+          <span>Grand Total Paid:</span>
+          <strong id="rec-total">₹1,97,000</strong>
+        </div>
+      </div>
+      
+      <button class="btn btn-primary" id="download-invoice-trigger" style="width: 100%;"><i class="fa-solid fa-download"></i> Save Receipt (PDF/HTML)</button>
+    </div>
+  </div>
+
+  <!-- Core Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
